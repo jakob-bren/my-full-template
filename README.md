@@ -1,6 +1,6 @@
 ![website preview](readme-imgs/img.PNG)
 
-#Site Overview
+# Site Overview
 The name of my Code Institute PP1 site is "North Louth History Club". As the name suggests, it is a site which curates and hosts information about the North Louth area. This site is aimed at North Louth locals in particular, followed by Irish people, followed by anyone who would happen to stumble upon it and take an interest. 
 # Table of Contents
 * [Technologies Used](#technologies-used)
