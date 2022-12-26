@@ -10,6 +10,65 @@ h2, h3 {
 
 }
 
+.contact {
+    font-size: 1.6rem;
+
+}
+
+.containsthanks {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+#thanks {
+    top: 50%;
+    left: 50%;
+    margin-top: 40vh;
+    background-color: white;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding: 2rem;
+    box-shadow: 0 0 6px 4px rgba(0, 0, 0, 0.169);
+}
+
+.thanks {
+    font-size: 1.6rem;
+    margin: auto;
+    text-align: center;
+   
+
+}
+
+.flexbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+    background-color: white;
+    max-width: 100%;
+    margin-left: 1rem;
+    
+}
+
+.flexbox > div {
+    background-color: white;
+    width: 45%;
+    height: 45%;
+    aspect-ratio: 1 / 1 ;
+    max-width: 100%;
+    margin: 1rem;
+    text-align: center;
+    font-size: 1rem;
+    box-shadow: 0 0 6px 4px rgba(0, 0, 0, 0.169);
+  }
+
+#comments {
+    max-width: 95%;
+    padding-top: 1rem;
+}
+
 
 .containsvid {
     position: relative;
@@ -27,19 +86,7 @@ h2, h3 {
         height: 100%;  
 }
 
-#containsimg {
-    margin-top: 0.5rem;
-    margin-bottom: 1rem;
-    position: relative;
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-   
-     
-}
+
 
 .sec1 > ul {
     padding-top: 50px;
@@ -51,7 +98,7 @@ h2, h3 {
 
 
 .rail, .town, .mil, .fun {
-    display: none;
+ 
   
 }
 
@@ -103,7 +150,7 @@ h2, h3 {
     list-style-type: none;
     color: white;
     width: 100%;
- 
+    cursor: pointer;
     user-select: none;
     z-index: 100;
     position: relative;
@@ -112,12 +159,11 @@ h2, h3 {
 }
 
 
-
-
 li > label {
     width: 100%;
     display: block;
     user-select: none;
+    cursor: pointer;
 }
 
 .prob1 {
@@ -126,7 +172,7 @@ li > label {
     user-select: none;
 }
 
-#close {
+.close {
     background-color: lightcoral;
     list-style-type: none;
     color: white;
@@ -137,7 +183,7 @@ li > label {
     display: block;
 }
 
-#close:hover {
+.close:hover {
     background-color: rgb(195, 90, 90);
     transition: 0.1s;
 }
@@ -298,7 +344,34 @@ img {
         body {
             position: relative;
         }
-        
+
+        footer {
+            width: 100%;
+            height: 70px;
+            background-color: darkslategrey;
+            color: white;
+            text-decoration: none;
+            position: static;
+            bottom: 0;
+            margin-top: 3rem;
+        }
+
+        footer > p {
+            padding: 1rem 1rem;
+        }
+
+        footer > a {
+            display: none;
+        }
+
+        section {
+            min-height: 250vh;
+        }
+
+        #anchor {
+        padding-top: 0rem;
+        }
+
         aside {
             display: none;
             z-index: -100;
@@ -333,6 +406,42 @@ img {
             margin-left: 1rem;
             margin-right: 7rem;
             width: 90%;
+        }
+
+        .flexbox {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: white;
+            max-width: 100%;
+            height: 100vh;
+          
+            flex: auto;
+            flex-shrink: 2;
+            margin-left: 0rem;
+            
+        }
+        
+        .flexbox > div {
+            
+            max-height: 100vh;
+            flex: 2 0 auto;
+        }
+
+        .flexbox > div > div .containsimg {
+            height: auto;
+            max-height: 100%;
+            object-fit:cover;
+        }
+
+        @media screen and (orientation:landscape) {
+            .flexbox > div {
+                height: 100vh;
+            }
+
+            .flexsec1 {
+                width: 93vw;
+            }
+
         }
 
         .menu__btn {
@@ -422,6 +531,7 @@ img {
             background-color: darkslategrey;
             font-family: "Arial", sans-serif;
             color: white;
+           
         }
 
         .top {
@@ -447,26 +557,56 @@ img {
             z-index: 90;
             background-color: lightskyblue;
             border-bottom: 3px solid rgb(190, 226, 240);
+            cursor: pointer;
         }
 
         .links>li:hover {
             color: #ffffff;
             transition: 0.25s;
+           
 
 
         }
 
+        #cont {
+            margin-bottom: 1rem;
+            text-align: center;
+        }
         .rail,
         .town,
         .fun,
         .mil {
             text-align: justify;
             padding: 5%;
-            margin-left: -6rem;
+            margin-left: rem;
             margin-right: -2rem;
 
             position: relative;
 
+        }
+
+        .flextitle {
+            width: 100%;
+            height: 3.5rem;
+            background-color: lightskyblue;
+            color: white;
+            font-weight: 600;
+            font-size: 1.65rem;
+            text-align: center;
+            padding-left: 0.5rem;
+            padding-top: 0.8rem;
+        }
+
+        .containsimg {
+            margin-top: 0.5rem;
+            margin-bottom: 1rem;
+            margin-left: -2rem;
+            margin-right: -2rem;
+            position: relative;
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+         
         }
 
         .content {
@@ -497,10 +637,28 @@ img {
             width: 100%;
         }
 
-        #cont {
-            text-align: center;
-            margin-left: -1.5rem;
+        .flexsec1 {
+            flex-direction: column;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 0.2rem;
         }
+
+            .flexsec1 > div {
+                box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.169);
+                margin-bottom: 1rem;
+            }
+
+        @media screen and (orientation:portrait) {
+        .flexsec1 {
+            width:86vw;
+            }
+        }
+
+        
+
+        
 
     }
 
@@ -508,6 +666,15 @@ img {
 
     .mobheader, .toosmall {
         display: none;
+    }
+    section {
+        min-height: 800px;
+    }
+
+    .flexsec1 {
+        margin-right: 0rem;
+        margin-left: 3rem;
+        width: 90%;
     }
     body {
         /* background: #f1f1f1; */
@@ -526,13 +693,9 @@ img {
         background-color: darkslategrey;
         font-family: "Arial", sans-serif;
         color: white;
+        box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.319);
 
 
-    }
-
-    .header ul, .header li {
-        text-decoration: none;
-        list-style-type: none;
     }
 
     .main {
@@ -543,7 +706,8 @@ img {
 
     #cont {
         text-align: left;
-        padding-top: 10px;
+        padding-top: -3rem;
+        padding-bottom: 6rem;
     }
 
     .separator1 {
@@ -570,6 +734,19 @@ img {
        
     }
 
+    .containsimg {
+        margin-top: 0.5rem;
+        margin-bottom: 1rem;
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+    
+
     aside {
         padding-top: 7.5%;
         padding-bottom: 7.5%;
@@ -584,6 +761,11 @@ img {
         margin-top: 6em;
         overflow-wrap: normal;
         text-align: center;
+    }
+    .side2 {
+        margin-top: 6em;
+        overflow-wrap:break-word;
+        text-align: left;
     }
 
     .align {
@@ -614,16 +796,17 @@ img {
         float: left;
         padding-left: 8px;
         padding-right: 8px;
-        padding-bottom: 16px;
+        padding-bottom: 18px;
         padding-top: 10px;
+        margin-top: 14px;
         font-family: "Arial", sans-serif;
         font-weight: 500;
         color: white;
         background-color: darkslategrey;
-        border-left: 0px solid;
+        border-left: 1px solid;
         border-right: 1px solid;
         border-top: 2px solid;
-        border-top-color: rgb(39, 64, 64);;
+        border-top-color: rgb(39, 64, 64);
         border-left-color: rgb(39, 64, 64);
         border-right-color: rgb(39, 64, 64);
         text-decoration: none;
@@ -633,6 +816,7 @@ img {
     .header a:hover {
         color: lightgray;
         background-color: rgba(0, 0, 0, .1);
+        
     }
 
     .title {
@@ -664,6 +848,16 @@ img {
         font-family: "Arial", sans-serif;
     }
 
+    .flextitle {
+        width: 100%;
+        height: 1.5rem;
+        background-color: lightskyblue;
+        color: white;
+        font-weight: 600;
+        padding-left: 0.5rem;
+        padding-top: 0.125rem;
+    }
+
     .top {
         padding-top: 50px;
         text-align: center;
@@ -673,21 +867,46 @@ img {
     section {
         overflow: auto;
         background-color: white;
-        margin-left: 150px;
-        margin-right: 150px;
+        margin-left: 6.5vw;
+        margin-right: 6.5vw;
         padding-top: 40px;
-        box-shadow: 5px 7px 5px 1px rgba(0, 0, 0, 0.319);
+        /*box-shadow: 5px 7px 5px 1px rgba(0, 0, 0, 0.319);*/
+        box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.319);
     }
 
-    
+    #comments > input[type=text], input[type=submit], textarea {
+        border: 1px solid rgb(200, 200, 200);
+        border-radius: 5px;
+      }
+
+      #comments > input[type=text]:hover, textarea:hover {
+        border: 1px solid rgb(20, 20, 20);
+        transition: 0.3s;
+
+      }
+
+    #comments > textarea::placeholder {
+        color: rgb(150,150,150);
+    }
+
+
+    #comments > input[type=submit]:hover {
+        background-color: darkgray;
+        transition: 0.1s;
+      }
 
 
     footer {
         width: 100%;
-        height: 70px;
+        height: 3rem;
         background-color: darkslategrey;
         position: static;
         bottom: 0;
+        margin-left: -1rem;
+        margin-right: -1rem;
+        padding: 0;
+        margin: 0;
+    
     }
 
     footer,

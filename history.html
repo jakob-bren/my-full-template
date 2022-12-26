@@ -10,7 +10,7 @@
 <body>
     <nav class ="mobheader">
         <div class="hamburger-menu">
-            <input id="menu__toggle" type="checkbox" />
+            <input id="menu__toggle" type="checkbox">
             <label class="menu__btn" for="menu__toggle">
               <span></span>
             </label>
@@ -28,37 +28,37 @@
     </nav>
     <nav class ="header">
         <p class="title">North Louth History Club</p>
-        <ul>
-            <li><a href="index.html">Home</a></li>   
-            <li><a href="about.html">About</a></li>
-            <li><a href="history.html" class="current">History</a></li>
-            <li><a href="resource.html">Resources</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="history.html" class="current">History</a>
+            <a href="resource.html">Resources</a>
+            <a href="contact.html">Contact</a>
     </nav> 
 
-    <section>
+    <section id="anchor">
         <div class="main">
             <h1 class="top">General History</h1>
         </div>
         
-         <div class="content1">Dundalk Town as so-named was founded in the 12th century by the Normans, however the area has been inhabited since at least 3700BC, with many of the present-day townlands predating the Norman conquest.
+         <div class="content1">Dundalk Town as so-named was founded in the 12th century by the Normans, however the area has been inhabited since at least 3700BC, with many of the present-day townlands predating the Norman conquest.</div>
             <div class="separator1"></div>
             
-            <div class="sec1">
-                <h2 id="cont">Sections</h2>
-                <br><ul class="links">
-                        <li><label for="show1"> &nbsp; ⌄ Railway History</label></li>
-                        <input type="checkbox" id="show1" class="hidden1" checked>
-                            <div class="rail">In its heyday of 1906, the railway branched off in four directions from Dundalk Station. One line headed east to Carlingford and Omeath, another west to counties Monaghan, Fermanagh, Tyrone, Donegal and Derry, and finally -- the surviving north and south lines to Belfast and Dublin respectively. 
+                <div class="flexsec1">
+                    <h2 id="cont">Sections</h2>
+                        <div class="rail">
+                            <div class="flextitle">Railway History</div>
+                            <p>
+                                In its heyday of 1906, the railway branched off in four directions from Dundalk Station. One line headed east to Carlingford and Omeath, another west to counties Monaghan, Fermanagh, Tyrone, Donegal and Derry, and finally -- the surviving north and south lines to Belfast and Dublin respectively. 
                                 In the picture below we count approximately an additional 20 stations which are now, regrettably, closed down and all the adjoining track lifted.
-                                <div id="containsimg"><img src="imgs/rail3.png"></div>The video below shows a journey on the Dundalk-Omeath railway line.
+                                <div class="containsimg"><img src="imgs/rail3.png" alt="A map of the greater North Louth area showing all the historical railway stations."></div>The video below shows a journey on the Dundalk-Omeath railway line.
                                 <div class="containsvid"><iframe src="//www.youtube.com/embed/u-8GTf42RZY"></iframe></div>
-                                <li id="close"><label for="show1">Click Here To Minimize This Section</label></li>
-                            </div>
-                        <li><label for="show2">&nbsp; ⌄ Town History</label></li>
-                        <input type="checkbox" id="show2" class="hidden2" checked>
-                            <div class="town"><p>Until 2013, Dundalk was the site of what was once the oldest shopping centre in Ireland - the aptly 
+                            </p>
+                        </div>
+
+                        <div class="town">
+                            <div class="flextitle">Town History</div>
+                            <p>
+                                Until 2013, Dundalk was the site of what was once the oldest shopping centre in Ireland - the aptly 
                                 named Old Dundalk Shopping Centre. This archaeological site was home to a butchers, an ATM, a bench, a childs play vehicle and
                                 two Tesco's, as well as numerous other vacant rooms known locally as "closed-down stores". Not much is known about the function
                                 of these empty rooms - some historians speculate they contained sacrificial altars, or possibly record stores and restaurants.
@@ -66,36 +66,41 @@
                                 Little photographic record remains of this fascinating historical site - indeed half the pictures are just reconstructions of 
                                 what it could have once looked like - such as this set of AI-generated images posted on Twitter.
                             </p>
-                            <li id="close"><label for="show2">Click Here To Minimize This Section</label></li>
                         </div>
                             
-                        <li><label class="prob1" for="show3">&nbsp; ⌄ Military History</label></li>
-                        <input type="checkbox" id="show3" class="hidden3" checked>
-                        <div class="mil"><p>In 1603 Dundalk was the site of a treaty between Hugh O'Neill on behalf of Ulster and X Z on behalf
-                            of England. At this treaty meeting, a truce was decided and, among other things, County Louth changed hands from Ulster to Leinster.
-                            <br><br>
-                            In 1921 a jailbreak was made from Dundalk Gaol by anti-treaty IRA men. 
-                            Some months later these anti-treaty IRA volunteers, led by Frank Aiken, would return to Dundalk 
-                            and conduct a night-time raid on what is now known as Aiken Barracks.</p>
-                            <li id="close"><label for="show3">Click Here To Minimize This Section</label></li>
+                        <div class="mil">
+                            <div class="flextitle">Military History</div>
+                            <p>
+                                In 1603 Dundalk was the site of a treaty between Hugh O'Neill on behalf of Ulster and X Z on behalf
+                                of England. At this treaty meeting, a truce was decided and, among other things, County Louth changed hands from Ulster to Leinster.
+                                <br><br>
+                                In 1921 a jailbreak was made from Dundalk Gaol by anti-treaty IRA men. 
+                                Some months later these anti-treaty IRA volunteers, led by Frank Aiken, would return to Dundalk 
+                                and conduct a night-time raid on what is now known as Aiken Barracks.
+                            </p>
                         </div>
-                    <li><label  class="prob1" for="show4">&nbsp; ⌄ Cultural History</label></li>
-                        <input type="checkbox" id="show4" class="hidden4" checked>
-                        <div class="fun"><p>Up until the late 1960s, County Louth had a Gaeltacht region - one of the very last remnants of the East Ulster dialect. 
-                            It was located in the foothills of the Cooley Mountains, above the village of Omeath, and was also bordered very closely by a similar 
-                            Gaeltacht region in South Armagh. A documentary was made on the subject, which is available to listen to (here), 
-                            as well as this, recordings were made of native speakers recounting local folklore as well as basic conversation
-                             and grammar in the language - the numbers, days of the week. etc. They can be found here: <a href="https://doegen.ie/taxonomy/term/21984">www.doegen.ie/taxonomy/term/21984</a></a></p>
+                        
 
-                             <p> As attested to in <a href="http://cluaindaimh.blogspot.com/2009/08/leid-beag-1.html">this blog</a> pertaining to the Gaeilge spoken in Cluain Daimh/Clonduff, County Down,
-                            one of the peculiar features of the Gaelic spoken in County Louth was that it concorded with the Gaelic spoken in Scotland in that in place of "ni", "cha" was used as the negative particle - 
-                            i.e "cha raibh" (or indeed cha rabh) instead of "ni raibh" </p>
-                             <div id="containsimg"><img src="imgs/chani.jpg"></div>
-                             <li id="close"><label for="show4">Click Here To Minimize This Section</label></li>
+                        <div class="fun">
+                            <div class="flextitle">Cultural History</div>
+                            <p>
+                                Up until the late 1960s, County Louth had a Gaeltacht region - one of the very last remnants of the East Ulster dialect. 
+                                It was located in the foothills of the Cooley Mountains, above the village of Omeath, and was also bordered very closely by a similar 
+                                Gaeltacht region in South Armagh. A documentary was made on the subject, which is available to listen to (here), 
+                                as well as this, recordings were made of native speakers recounting local folklore as well as basic conversation
+                                and grammar in the language - the numbers, days of the week. etc. They can be found here: <a href="https://doegen.ie/taxonomy/term/21984">www.doegen.ie/taxonomy/term/21984</a>
+                            </p>
+                            <p> 
+                                As attested to in <a href="http://cluaindaimh.blogspot.com/2009/08/leid-beag-1.html">this blog</a> 
+                                pertaining to the Gaeilge spoken in Cluain Daimh/Clonduff, County Down, one of the notable features of 
+                                the Gaelic spoken in County Louth was that it concorded with the Gaelic spoken in Scotland in
+                                using "cha" in place of "ni" as the negative particle - i.e "cha raibh" (or indeed cha rabh) 
+                                instead of "ni raibh" 
+                            </p>
+                             <div class="containsimg"><img src="imgs/chani.jpg" alt="A map of the Gaelic countries of Scotland and Ireland, divided at the midpoint by a line. Those above the line use &quot;cha&quot; as the negative particle, those below the line use &quot;ni&quot; as the negative particle."></div>
                         </div>
-                </ul>
                 </div>
-            </div>
+        
          
         
       
@@ -105,7 +110,7 @@
     <!-- timeline idea - have a timeline from town prehistory, foundation, key events, treaties, battles, etc etc. use the scrubby line/bubble idea if possible -->
 
     <footer>
-        <p>© North Louth History Club 2022</p> <a href="inneacs.html">Ar fáil as Gaeilge chomh maith</a>
+        <p>© North Louth History Club 2022</p> <a href="#anchor">Jump to top</a>
     </footer>
 </body>
 </html>
