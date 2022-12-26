@@ -1,10 +1,20 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+![website preview](readme-imgs/img.PNG)
 
-Welcome Jakob Brennan,
+#Site Overview
+The name of my Code Institute PP1 site is "North Louth History Club". As the name suggests, it is a site which curates and hosts information about the North Louth area. This site is aimed at North Louth locals in particular, followed by Irish people, followed by anyone who would happen to stumble upon it and take an interest. 
+# Table of Contents
+* [Technologies Used](#technologies-used)
+* [Features](#features)
+* [Design](#design) 
+    * [Inspiration](#inspiration)
+   
+* [Testing](#testing)
+    * [Manual Testing](#manual-testing)
+    * [Lighthouse Testing](#lighthouse-testing)
+    * [Validator Testing](#validator-testing)
+    * [Bugs](#bugs)  
+* [Credits](#credits)  
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
-
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
 
 ## Gitpod Reminders
 
