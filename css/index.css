@@ -720,7 +720,7 @@ img {
        
     }
 
-    .current {
+    #current {
 
         border-bottom: 3px solid rgba(220, 20, 60, 0.7);
 
