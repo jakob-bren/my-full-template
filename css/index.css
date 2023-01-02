@@ -5,13 +5,15 @@
 
 h2, h3 {
 
-    margin-bottom: -70px;
+    /* margin-bottom: -70px; */
     min-height:30px;
 
 }
 
 .contact {
-    font-size: 1.6rem;
+    font-size: 1.1rem;
+   
+   
 
 }
 
@@ -86,107 +88,6 @@ h2, h3 {
         height: 100%;  
 }
 
-
-
-.sec1 > ul {
-    padding-top: 50px;
-    text-align: left;
-    margin-left:70px;
-    margin-bottom: -70px;
-}
-
-
-
-.rail, .town, .mil, .fun {
- 
-  
-}
-
-
-
-#show1:checked ~ .rail {
-   display: block;
-   left: 0;
-}
-
-#show2:checked ~ .town {
-    display: block;
-    left: 0;
- }
-
- #show3:checked ~ .mil {
-    display: block;
-    left: 0;
- }
-
- #show4:checked ~ .fun {
-    display: block;
-    left: 0;
- }
-
-.hidden1 {
-    position: absolute;
-    left: -100vw;
-}
-
-.hidden2 {
-    position: absolute;
-    left: -100vw;
-}
-
-.hidden3 {
-    position: absolute;
-    left: -100vw;
-}
-
-.hidden4 {
-    position: absolute;
-    left: -100vw;
-}
-
-.links > li {
-    background-color: lightskyblue;
-    border-bottom: 3px solid rgb(190, 226, 240);
-    list-style-type: none;
-    color: white;
-    width: 100%;
-    cursor: pointer;
-    user-select: none;
-    z-index: 100;
-    position: relative;
-   
-   
-}
-
-
-li > label {
-    width: 100%;
-    display: block;
-    user-select: none;
-    cursor: pointer;
-}
-
-.prob1 {
-    width: 100%;
-    display: block;
-    user-select: none;
-}
-
-.close {
-    background-color: lightcoral;
-    list-style-type: none;
-    color: white;
-    margin-bottom: 0.75rem;
-    text-align: center;
-    cursor: pointer;
-    width: 100%;
-    display: block;
-}
-
-.close:hover {
-    background-color: rgb(195, 90, 90);
-    transition: 0.1s;
-}
 
 
 @media only screen and not (pointer) and (max-width: 1080px) {
@@ -283,15 +184,11 @@ li > label {
 
 .menu__item {
     display: block;
-
-    padding: 12px 24px;
-
+    padding: 0.8rem 1.6rem;
     color: white;
-
     font-family: 'Arial', sans-serif;
     font-size: 30px;
     font-weight: 600;
-
     text-decoration: none;
 }
 
@@ -332,7 +229,34 @@ img {
     padding-bottom: 2rem;
 }
 
-@media only screen and (pointer) and (max-width: 1279px) {
+.left {
+    flex: 1;
+    margin-left: 2rem;
+    margin-top: 1rem;
+}
+
+.right {
+    flex: 1;
+    margin-top: 1rem;
+}
+
+.flexitainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+@media screen and (orientation:portrait) { 
+
+
+
+}
+
+@media only screen and (pointer) and (max-width: 1151px) {
 
 
 
@@ -347,13 +271,13 @@ img {
 
         footer {
             width: 100%;
-            height: 70px;
+            height:     1rem;
             background-color: darkslategrey;
             color: white;
             text-decoration: none;
-            position: static;
+            position: absolute;
             bottom: 0;
-            margin-top: 3rem;
+            
         }
 
         footer > p {
@@ -365,7 +289,7 @@ img {
         }
 
         section {
-            min-height: 250vh;
+            min-height: 200vh;
         }
 
         #anchor {
@@ -413,8 +337,7 @@ img {
             flex-wrap: wrap;
             background-color: white;
             max-width: 100%;
-            height: 100vh;
-          
+           max-height: 150vh;
             flex: auto;
             flex-shrink: 2;
             margin-left: 0rem;
@@ -423,7 +346,7 @@ img {
         
         .flexbox > div {
             
-            max-height: 100vh;
+            max-height: 160vh;
             flex: 2 0 auto;
         }
 
@@ -432,14 +355,34 @@ img {
             max-height: 100%;
             object-fit:cover;
         }
+        .containsthanks {
+            height: 40vh;
+        }
+        #thanks {
+            width: 90%;
+            margin-left: 3%;
+            margin-bottom: 75%;
+            margin-top: 50%;
+   
+            
+        }
+        
 
         @media screen and (orientation:landscape) {
+            section {
+                height: 350vh;
+            }
             .flexbox > div {
-                height: 100vh;
+                height: 150vh;
+                max-height: 300vh;
             }
 
             .flexsec1 {
                 width: 93vw;
+            }
+
+            footer {
+                display: none;
             }
 
         }
@@ -450,10 +393,8 @@ img {
             position: fixed;
             top: 20px;
             left: 20px;
-
             width: 26px;
             height: 26px;
-
             cursor: pointer;
             z-index: 1;
         }
@@ -463,10 +404,8 @@ img {
         .menu__btn>span::after {
             display: block;
             position: absolute;
-
             width: 100%;
             height: 2px;
-
             background-color: white;
 
         }
@@ -490,24 +429,18 @@ img {
             width: 100%;
             height: 350px;
             margin-top: 63px;
-
             padding: 10px 0;
-
             list-style: none;
             background-color: rgb(108, 122, 136, 0.75);
         }
 
         .menu__item {
             display: block;
-
             padding: 12px 24px;
-
             color: white;
-
             font-family: 'Arial', sans-serif;
             font-size: 30px;
             font-weight: 600;
-
             text-decoration: none;
 
         }
@@ -543,31 +476,6 @@ img {
             padding-bottom: 2rem;
         }
 
-        .links>li {
-            display: block;
-            font-size: 1.5rem;
-            font-weight: 450;
-            padding-left: 0.75rem;
-            padding-right: 0.75rem;
-            list-style-type: none;
-            margin-right: 2rem;
-            margin-left: -5rem;
-            width: 150%;
-            overflow: hidden;
-            z-index: 90;
-            background-color: lightskyblue;
-            border-bottom: 3px solid rgb(190, 226, 240);
-            cursor: pointer;
-        }
-
-        .links>li:hover {
-            color: #ffffff;
-            transition: 0.25s;
-           
-
-
-        }
-
         #cont {
             margin-bottom: 1rem;
             text-align: center;
@@ -578,35 +486,43 @@ img {
         .mil {
             text-align: justify;
             padding: 5%;
-            margin-left: rem;
-            margin-right: -2rem;
-
+            margin-left: 0rem;
+            margin-right: -1.75rem;
+            
             position: relative;
 
         }
 
         .flextitle {
-            width: 100%;
+            width: 95%;
             height: 3.5rem;
             background-color: lightskyblue;
             color: white;
             font-weight: 600;
             font-size: 1.65rem;
             text-align: center;
-            padding-left: 0.5rem;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
             padding-top: 0.8rem;
+            
         }
 
         .containsimg {
             margin-top: 0.5rem;
             margin-bottom: 1rem;
-            margin-left: -2rem;
-            margin-right: -2rem;
+            
+          
             position: relative;
-            width: 100%;
-            max-width: 100%;
+            width: 95%;
+            max-width: 95%;
             height: auto;
          
+        }
+
+        .rail > .containsimg, .fun > .containsimg {
+            margin-left: 0.7rem;
+            height: 120%;
         }
 
         .content {
@@ -651,9 +567,11 @@ img {
             }
 
         @media screen and (orientation:portrait) {
-        .flexsec1 {
-            width:86vw;
-            }
+            .flexsec1 { width:86vw; }
+            .flexitainer {flex-direction: column;} 
+            .left, .right {margin-right: 1.5rem;}
+            .left { justify-content: center; align-items: center;}
+            .town > .flextitle, .mil > .flextitle, .fun > .flextitle, .town > p, .mil > p { margin-right: 1.5rem;} 
         }
 
         
@@ -662,13 +580,13 @@ img {
 
     }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1152px) and (orientation:landscape) {
 
     .mobheader, .toosmall {
         display: none;
     }
     section {
-        min-height: 800px;
+        min-height: 200vh;
     }
 
     .flexsec1 {
@@ -676,6 +594,28 @@ img {
         margin-left: 3rem;
         width: 90%;
     }
+
+    .left {
+        flex: 1;
+        margin-left: 2rem;
+        margin-top: 1rem;
+    }
+    
+    .right {
+        flex: 3;
+        margin-top: 1rem;
+    }
+    
+    .flexitainer {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
     body {
         /* background: #f1f1f1; */
         background-image: url(https://assets-eu-01.kc-usercontent.com/aa24ba70-9a12-01ae-259b-7ef588a0b2ef/21818b7f-a293-4cc2-81b7-752e9695845d/header-carlingford-lough-louth.jpg);
@@ -704,12 +644,7 @@ img {
     
     }
 
-    #cont {
-        text-align: left;
-        padding-top: -3rem;
-        padding-bottom: 6rem;
-    }
-
+   
     .separator1 {
         height: 1px;
         background: darkslategray;
@@ -726,7 +661,7 @@ img {
 
     .content {
         float: left;
-        width: 65%;
+        width: 70%;
         padding-top: 7.5%;
         padding-bottom: 7.5%;
         padding-left: 5%;
@@ -751,7 +686,7 @@ img {
         padding-top: 7.5%;
         padding-bottom: 7.5%;
         float: right;
-        width: 25%;
+        width: 23%;
         color: black;
         padding-right: 5%;
         z-index: 50;
@@ -791,9 +726,10 @@ img {
 
     }
 
-    .header a {
+    .header .nav {
         width: 8%;
         float: left;
+        text-align: center;
         padding-left: 8px;
         padding-right: 8px;
         padding-bottom: 18px;
@@ -803,19 +739,22 @@ img {
         font-weight: 500;
         color: white;
         background-color: darkslategrey;
-        border-left: 1px solid;
+       /*  border-left: 1px solid;
         border-right: 1px solid;
         border-top: 2px solid;
-        border-top-color: rgb(39, 64, 64);
+       border-top-color: rgb(39, 64, 64);
         border-left-color: rgb(39, 64, 64);
-        border-right-color: rgb(39, 64, 64);
+        border-right-color: rgb(39, 64, 64); */
         text-decoration: none;
         
     }
 
-    .header a:hover {
-        color: lightgray;
+    .header .nav:hover {
+        color: rgb(200, 200, 200);
         background-color: rgba(0, 0, 0, .1);
+        border-bottom: 3px solid rgb(174, 89, 89);
+        font-size: 1.1rem;
+        transition: 0.25s;
         
     }
 
@@ -826,10 +765,15 @@ img {
         font-weight: 700;
         padding-left: 25px;
         padding-bottom: 20px;
-
-
+        text-overflow: ellipsis;
+        overflow:hidden;
+        white-space:nowrap;
+        text-decoration: none;
+        color: white;
+        margin-top: 1.25rem;
     }
 
+    .title:hover {  color: rgb(200,200,200); transition: 0.1s; }
 
     .links > li:hover {
     
@@ -848,6 +792,14 @@ img {
         font-family: "Arial", sans-serif;
     }
 
+    #cont {
+        text-align: left;
+        padding-top: -3rem;
+        padding-bottom: 0.3rem;
+        margin-left: 0.8rem;
+    }
+
+
     .flextitle {
         width: 100%;
         height: 1.5rem;
@@ -856,6 +808,14 @@ img {
         font-weight: 600;
         padding-left: 0.5rem;
         padding-top: 0.125rem;
+
+    }
+
+    .rail,
+    .town,
+    .fun,
+    .mil {
+        margin-left: 1rem;
     }
 
     .top {
@@ -867,9 +827,9 @@ img {
     section {
         overflow: auto;
         background-color: white;
-        margin-left: 6.5vw;
-        margin-right: 6.5vw;
-        padding-top: 40px;
+        margin-left: 7vw;
+        margin-right: 7vw;
+        padding-top: 2rem;
         /*box-shadow: 5px 7px 5px 1px rgba(0, 0, 0, 0.319);*/
         box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.319);
     }
@@ -898,7 +858,7 @@ img {
 
     footer {
         width: 100%;
-        height: 3rem;
+        height: 3.2rem;
         background-color: darkslategrey;
         position: static;
         bottom: 0;
