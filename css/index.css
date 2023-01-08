@@ -17,6 +17,14 @@ h2, h3 {
 
 }
 
+.whitespace {
+    height: 4rem;
+}
+
+.indent {
+    margin-left: 1rem;
+}
+
 .containsthanks {
     width: 100vw;
     height: 100vh;
@@ -91,10 +99,16 @@ h2, h3 {
 
 
 @media only screen and not (pointer) and (max-width: 1080px) {
-
+ /* for mobile devices */
     * {
         overflow: hidden;
         width: device-width;
+    }
+
+    footer {
+        display: none;
+        /* as in my manual testing notes; I have been at this for an interminable amount of time and cannot get it to work so I am simply
+        going to hide it on mobile/smaller screens. */
     }
 
     html,
@@ -215,7 +229,7 @@ h2, h3 {
     margin-bottom: 2rem;
     margin-left: 2rem;
     margin-right: 2rem;
-    margin-top: 1rem;
+    margin-top: 2rem;
     width: 95%;
 }
 
@@ -250,16 +264,17 @@ img {
     flex-direction: row;
 }
 
-@media screen and (orientation:portrait) { 
-
-
-
+.flexcontent {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
+
+
 @media only screen and (pointer) and (max-width: 1151px) {
-
-
-
+ /* for smaller browser windows and tablets */ 
         html,
         body {
             overflow-x: hidden;
@@ -270,13 +285,20 @@ img {
         }
 
         footer {
-            width: 100%;
-            height:     1rem;
+          /*  width: 100%;
+            height: 3.2rem;
             background-color: darkslategrey;
             color: white;
             text-decoration: none;
-            position: absolute;
+            justify-content: center;
+            position: static;
             bottom: 0;
+            margin-bottom: 0;
+            padding-bottom: 0.5rem;
+            align-self: flex-end; */
+            display: none;
+            /* as in my manual testing notes; I have been at this for an interminable amount of time and cannot get it to work so I am simply
+            going to hide it on mobile/smaller screens. */
             
         }
 
@@ -296,10 +318,7 @@ img {
         padding-top: 0rem;
         }
 
-        aside {
-            display: none;
-            z-index: -100;
-        }
+        
 
         h1,
         h2,
@@ -349,6 +368,8 @@ img {
             max-height: 160vh;
             flex: 2 0 auto;
         }
+
+       
 
         .flexbox > div > div .containsimg {
             height: auto;
@@ -476,8 +497,17 @@ img {
             padding-bottom: 2rem;
         }
 
-        #cont {
+        #greenore {
+            width: 100%;
+            min-width: 100% !important;
+            min-height: 100% !important;
+            object-fit: fill;
+            align-items: center;
+        }
+
+        .cont {
             margin-bottom: 1rem;
+        
             text-align: center;
         }
         .rail,
@@ -561,12 +591,19 @@ img {
             margin-left: 0.2rem;
         }
 
-            .flexsec1 > div {
+        .flexsec1 > div {
                 box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.169);
                 margin-bottom: 1rem;
-            }
+        }
+
+        .side2 > a {
+            align-items: center;
+            display: block;
+            text-align: center;
+        }
 
         @media screen and (orientation:portrait) {
+            .aside { width: 100%; }
             .flexsec1 { width:86vw; }
             .flexitainer {flex-direction: column;} 
             .left, .right {margin-right: 1.5rem;}
@@ -682,14 +719,35 @@ img {
     }
     
 
-    aside {
-        padding-top: 7.5%;
+    .flexcontent {
+        margin-top: -7.5rem;
+        flex: 2 0;
+        padding-left: 3.5%;
+        padding-right: 2.5%;
+        padding-bottom: 4.5%;
+        min-height: 30px;
+        text-align: left;
+        /* quite useful for troubleshooting border: 1px solid blue; */
+        
+    }
+    .aside {
+        top: 0;
+        position: sticky;
+        align-self: flex-start;
+        padding-top: 6rem;
+        flex: 1 8;
         padding-bottom: 7.5%;
-        float: right;
-        width: 23%;
         color: black;
-        padding-right: 5%;
+        padding-right: 2%;
+        margin-right: 0.5rem;
         z-index: 50;
+        max-width: 22%;
+        /* this is quite useful for troubleshooting purposes border: 1px solid black; */
+        
+    }
+
+    .margin {
+        margin-top: 14.5rem;
     }
 
     .side {
@@ -698,10 +756,11 @@ img {
         text-align: center;
     }
     .side2 {
-        margin-top: 6em;
+        width: 100%;
+        margin-top: 0em;
         overflow-wrap:break-word;
-        text-align: left;
     }
+
 
     .align {
         float: left;
@@ -858,15 +917,17 @@ img {
 
     footer {
         width: 100%;
-        height: 3.2rem;
+        height: 3rem;
         background-color: darkslategrey;
-        position: static;
-        bottom: 0;
+        position: absolute;  
         margin-left: -1rem;
-        margin-right: -1rem;
-        padding: 0;
-        margin: 0;
+        margin-right: -2rem;
+     
     
+    }
+
+    .spacer {
+        flex: 1;
     }
 
     footer,
