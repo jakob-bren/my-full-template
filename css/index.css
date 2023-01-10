@@ -17,6 +17,11 @@ h2, h3 {
     font-size: 1.1rem;
 }
 
+.context {
+    padding-left: 0.35rem;
+    padding-right: 0.35rem;
+}
+
 .whitespace {
     height: 4rem;
 }
@@ -59,11 +64,25 @@ h2, h3 {
     
 }
 
-.flexbox > div {
+.flexbox > div.two, .flexbox > div.containsimg {
     background-color: white;
     width: 45%;
     height: 45%;
     aspect-ratio: 1 / 1 ;
+    max-width: 100%;
+    margin: 1rem;
+    text-align: center;
+    font-size: 1rem;
+    box-shadow: 0 0 6px 4px rgba(0, 0, 0, 0.169);
+  }
+
+  .flexbox > div.one {
+    background-color: white;
+    width: 92.5%;
+    height: 45%;
+    padding-top: 1rem;
+    padding-left: 4rem;
+    padding-right: 3rem;
     max-width: 100%;
     margin: 1rem;
     text-align: center;
@@ -398,15 +417,39 @@ img {
             
         }
         
-        .flexbox > div {
+        .flexbox > div.two, .flexbox > div.containsimg {
             
             max-height: 160vh;
             flex: 2 0 auto;
         }
 
+        
+
+        .flexbox > div.one {
+            max-height: 160vh;
+            flex: 2 0 auto;
+            justify-content: center;
+            align-content: center;
+        }
+
+        .flexbox > #google {
+           padding-left: 0;
+           padding-right: 0;
+           padding-bottom: 1rem;
+        }
+
+        .google {
+            width: 35vh;
+            height: 45vh;
+        }
+
+        .flexbox > div#form {
+            padding-top: 2rem;
+        }
+
        
 
-        .flexbox > div > div .containsimg {
+        .flexbox > div.containsimg {
             height: auto;
             max-height: 100%;
             object-fit:cover;
@@ -428,9 +471,19 @@ img {
             section {
                 height: 150vh;
             }
-            .flexbox > div {
-                height: 150vh;
+            .flexbox > div.two, .flexbox > div.containsimg {
+                height: 70vh;
                 max-height: 300vh;
+            }
+
+            .flexbox > div.one {
+                height: 76vh;
+                max-height: 300vh;
+            }
+
+            .google {
+                width: 85vh;
+                height: 55vh;
             }
 
             .flexsec1 {
@@ -641,6 +694,21 @@ img {
             align-items: center;
             
             text-align: center;
+        }
+
+        #comments > textarea {
+            margin-bottom: 1rem;
+        }
+
+        #comments > input[type=text], input[type=submit], textarea {
+            border: 0.11rem solid rgb(226, 226, 226);
+            border-radius: 0.05rem;
+          }
+    
+        #comments > input[type=text]:focus, textarea:focus {
+            border: 0.11rem solid rgb(20, 20, 20);
+            transition: 0.3s;
+    
         }
 
         @media screen and (orientation:portrait) {
@@ -949,20 +1017,24 @@ img {
     }
 
     #comments > input[type=text], input[type=submit], textarea {
-        border: 1px solid rgb(200, 200, 200);
-        border-radius: 5px;
+        border: 0.11rem solid rgb(226, 226, 226);
+        border-radius: 0.05rem;
       }
 
-      #comments > input[type=text]:hover, textarea:hover {
-        border: 1px solid rgb(20, 20, 20);
+    #comments > input[type=text]:hover, textarea:hover {
+        border: 0.11rem solid rgb(20, 20, 20);
         transition: 0.3s;
 
-      }
+    }
 
+  
     #comments > textarea::placeholder {
         color: rgb(150,150,150);
     }
 
+    #comments > input[type=submit] {
+        padding-top: 0.5rem;
+    }
 
     #comments > input[type=submit]:hover {
         background-color: darkgray;

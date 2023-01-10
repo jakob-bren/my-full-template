@@ -26,13 +26,17 @@ CSS3
 
 ## Features
 
-Flexbox styling; complete continuity and preservation of features from Desktop to mobile, responsive design from 1920x1080 down to 1152x864 in full desktop mode and support for practically any mobile device.
+Flexbox styling; complete continuity and preservation of features from Desktop to mobile, responsive design from 1920x1080 down to 1152x864 in full desktop mode and support for practically any mobile device. 
+
+A particular little favourite of mine is the cha/ni map at the bottom of the History page and how it sits beside the text in desktop mode but above it in mobile mode - this is admittedly quite simple and is similar to the operation of the flexboxes on the contact and homepages, but it pleases me.
+
+Another minor feature is that the end of the page title turns to ellipsis when the page is resized horizontally and the navbar buttons collide with it.
 
 Hamburger menu in mobile mode
 
 Confirmation page upon submission of Contact form
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+
 
 **September 1 2021:** Remove `PGHOSTADDR` environment variable.
 
@@ -48,7 +52,7 @@ causing for e.g the hamburger menu to work on one page but not another.
 
 I also tested the website on Firefox and Edge - I do not have access to a Mac computer nor a Mac VM to test through Safari.
 
-I ran the website through W3C validator to see if anything was outdated, bad practice, outright wrong, etc and fixed accordingly.
+I ran each individual page of the website through W3C Markup & CSS validator to see if anything was outdated, bad practice, outright wrong, etc and fixed accordingly. No errors on all pages.
 
 I ran the website through Chrome's Lighthouse.
 
