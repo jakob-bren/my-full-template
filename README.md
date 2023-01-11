@@ -10,8 +10,8 @@ The name of my Code Institute PP1 site is "North Louth History Club". As the nam
 * [Technical Features](#technical-features)
 * [Testing](#testing)
     * [Manual Testing](#manual-testing)
-    * [Lighthouse Testing](#lighthouse-testing)
-    * [Validator Testing](#validator-testing)
+    * [Lighthouse Testing](#lighthouse)
+    * [Validator Testing](#validator)
     * [Bugs](#bugs)  
 * [Deployment](#deployment)
 * [Credits](#credits)  
@@ -75,6 +75,11 @@ Confirmation page upon submission of Contact form; basic validation of user-inpu
 ## Future Features
 There are more features which I would have liked to add if I had the time, the knowledge, or if the scope called for them. 
 
+I would have liked to implement a fancier hamburger menu - for e.g one that pops out from the side and has collapsible menu options.
+
+I would have liked to implement a feature where the navbar disappears after a certain length of time of not being interacted with - but I believe this
+would require Javascript.
+
 I would have liked to implement an interactible Table of Contents and collapsible divs on the History page - i.e users could click to reach a 
 certain part of the page, and could also "minimize" that section when they were done with it. I had tried to implement this latter feature using the Checkbox hack method again but the way I had designed it, was throwing up too many W3C validator errors which I could not manage to solve - so I made the divs static instead. With Javascript it would be easier to implement collapsible divs.
 
@@ -82,12 +87,14 @@ As for the Table of Contents, I feel that it is not really worthwhile here; but 
 
 If this were a real historical website; more rigorous sourcing would be necessary.
 
+I would have liked to add a draggable "timeline", but I started a full-time job very early on into the project and so I did not have as much time left over as I had intitially envisioned - I have still managed, I feel, to turn out a passable website - but I would have liked to have had more personal free time to spend on it.
+
 **September 1 2021:** Remove `PGHOSTADDR` environment variable.
 
 
 ------
 
-## Testing 
+# Testing 
 
 I tested the website in Chrome on my desktop and Chrome on my Android devices - methodically testing core elements on each page, zooming out, changing to landscape,
 etc - through this testing I discovered many actions which "broke" my website or which had somehow slipped thru the cracks 
@@ -95,13 +102,27 @@ causing for e.g the hamburger menu to work on one page but not another.
 
 I also tested the website on Firefox and Edge - I do not have access to a Mac computer nor a Mac VM to test through Safari.
 
+I asked a friend to test the page for themselves and also submitted it for peer-code-review and took suggestions into account.
+
 I ran each individual page of the website through W3C Markup & CSS validator to see if anything was outdated, bad practice, outright wrong, etc and fixed accordingly. No errors on all pages.
+
+## Lighthouse
 
 I ran the website through Chrome's Lighthouse.
 
-Lighthouse asked me to convert all images to Webp.
+![Lighthouse scores for History Page](readme-imgs/lh01.JPG)
 
-Lighthouse also complains about the size of the embedded video; but to stream more efficiently and download a buffer bit-by-bit 
+![Lighthouse scores for About Page](readme-imgs/lh02.JPG)
+
+![Lighthouse scores for Index Page](readme-imgs/lh03.JPG)
+
+![Lighthouse scores for Contact Page](readme-imgs/lh04.JPG)
+
+I ran Lighthouse tests at several points throughout the project, but those above are the final scores.
+
+One of the major changes was that Lighthouse asked me to convert all images to Webp - I did so and this improved performance drastically.
+
+Lighthouse also complained about the size of the embedded video; but, from my research, to stream more efficiently and download a buffer bit-by-bit 
 would require the javascript-based Media Source API - which due to the presence of javascript is beyond the scope of this project.
 
 Alternatively I could host it on a CDN - but again, to have my own CDN is beyond the scope of this project and 
@@ -119,21 +140,34 @@ rather than a piecemeal buffering setup.
 
 The most I can do, to my knowledge, is change preload="true" to preload="none" or "metadata" - which I have done and which does seem to cut down on pageload times.
 
+## Validator
+
+![Validator 1](readme-imgs/val1.JPG)
+
+![Validator 2](readme-imgs/val2.JPG)
+
+![Validator 3](readme-imgs/val3.JPG)
+
+![Validator 4](readme-imgs/val4.JPG)
+
+![Validator 5](readme-imgs/val5.JPG)
+
+
+
 # Bugs
 
 In the process of fixing errors with the navbar yet preserving styling and turning the page title into a Homepage link, I added the class "nav" to all of my
-"a href" navigation buttons - which conflicted with the class named "current" which I applied to the page the user was on 
-to add a little underline to the relevant navbar button. Upon noticing this (actually days) later and after some brief deliberation, I realized "id" was more
-appropriate for this "current" type of styling as there is only *one* element on each page which will need to have that specific style applied to it, while a "class" can apply to many elements. - so "class=current" became "id=current".
+"a href" navigation buttons - which conflicted with the class named "current" which I applied to the page the user was on  to add a little underline to the relevant navbar button - meaning the "current" style was overrided and I was lacking the underline under the active page. Upon noticing this (actually days) later and after some brief deliberation, I realized "id" was more appropriate for this "current" type of styling as there is only *one* element on each page which will need to have that specific style applied to it, while a "class" can apply to many elements. - so "class=current" became "id=current".
 
-Throughout the project the footer would mess up on mobile (and sometimes on desktop) and appear halfway up the page or at the end of the initial viewport rather than "sticking" to the exact bottom of the page - or otherwise it would appear at the bottom but in a broken/glitched state. I have not been able to figure out why this is for the past month or so; it worked fine initially but now it seems irreparably bugged - I would normally try and fix it before submission but in this case I feel as if I have made the CSS too convoluted, being that it's my first time writing a responsive webpage and that I originally started it in a fixed, desktop mindset using px, float, static widths etc - it feels intimidatingly long and detailed and I think the only thing for it would be to destroy all the CSS and write it from scratch - so instead, as the deadline is approaching fast - I have just set it to "display:none" on mobile.
+Throughout the project the footer would mess up on mobile (and sometimes on desktop) and appear halfway up the page or at the end of the initial viewport rather than "sticking" to the exact bottom of the page - or otherwise it would appear at the bottom but in a broken/glitched state. After a lot of troubleshooting I have managed to fix it on Desktop - the issue was down to a negative margin. but as for the mobile it still seems not to work properly - I feel as if I have made the CSS too convoluted, being that it's my first time writing a responsive webpage and that I originally started it in a fixed, desktop mindset using px, float, static widths etc -  I think the only thing for it would be to destroy all the CSS and write it from scratch - so instead, as the deadline is approaching fast - I have just set it to "display:none" on mobile.
 
 I had an issue with flexboxes being out of alignment with eachother - I put borders on the flexi divs and discovered the "aside" flex wasn't sticking to the top of the page. From here it was a matter of adding "top: 0; position: sticky; align-self: flex-start;" to aside and padding it accordingly to max with the main div. It now looks a lot cleaner, although by no means perfect.
 
 One other issue was that, in tablet/narrow browser tab display mode aka 1151px in the stylesheet, I had a quite lot of irremovable whitespace before the first Flexbox div on the Home & About pages - this did not show up in the mobile phone display mode nor the desktop mode. I was quite stumped as to how to fix this for some time but; after investigating thru Chrome developer tools (and the equivalent forks of this same tool in Firefox and Edge; since both are based on Chrome) I discovered that Chrome was overriding my stylesheet in this "tablet/narrow browser tab" display mode - for reasons unknown, it was applying "display: block" to Flexbox children. After a lot of Google searches and rewriting my search terms; I stumbled upon the fix that worked, which was to apply "justify-content: flex-start;" to the parent div.
 
+I have also studied Flexbox in more detail since doing the above and feel I have a much better understanding of it now.
 
-# Deployment
+## Deployment
 I deployed my site, "North Louth History Club" on Github Pages. The process was as follows: 
 
 - I went to the project repository and navigated to the 'Settings' tab on the furthest right-edge of the repository menu
@@ -141,10 +175,17 @@ I deployed my site, "North Louth History Club" on Github Pages. The process was 
 - Under Branch, I selected 'Main' and then hit save.
 - I went off and retrieved a snack, came back and refreshed the page, and now had a link to my live website.
 
-# Credits
+## Credits
 
 The bulk of the code for the Hamburger menu came from this [Codepen](https://codepen.io/andreykrokhin/pen/mGEqja) shared on a "Hamburger menu using purely HTML & CSS" article. 
 
 I referenced [this](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) while learning about Flexbox.
 
+Half of the photos and the video were sourced from a Facebook page called "Dundalk Northend and Friends"
+Other pictures were sourced from [Dundalk - Talk of the Town](https://talkofdatown.wordpress.com/)
+Picture of the railway shed is from [Archilovers](https://www.archilovers.com/projects/145262/hse-primary-care-unit.html)
+Background image is from [DiscoverIreland](https://www.discoverireland.ie/louth/short-stay-louth)
+Audio sourced from [Doegen.ie](http://doegen.ie/)
+
 I want to also give credit to my wife and my cats for supporting me through this project, as well as the wider Code Institute Slack community.
+
