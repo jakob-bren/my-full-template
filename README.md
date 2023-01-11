@@ -23,6 +23,7 @@ The name of my Code Institute PP1 site is "North Louth History Club". As the nam
 - [CSS3](https://en.wikipedia.org/wiki/CSS) for the stylesheet 
 - [Github]( https://github.com/) for file management & version control 
 - [Gitpod]( https://www.gitpod.io/) for code editing and pushing commits
+- [Sublime Text](https://www.sublimetext.com/) as a backup editor whenever I felt a bit hindered by my inexperience in using Gitpod.
 
 # Resources
 - [Code Institute](https://codeinstitute.net/) Course material & the Slack community 
