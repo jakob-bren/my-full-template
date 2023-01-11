@@ -8,15 +8,13 @@
     <title>North Louth History Club</title>
 </head>
 <body>
-    <nav class ="mobheader">
-        <div class="hamburger-menu"> <!-- hamburger menu  source - i have slimmed it slightly but this is the source https://codepen.io/alvarotrigo/pen/yLzaPVJ-->
+    <nav class ="mobheader"> <!-- mobile-only hamburger menu-->
+        <div class="hamburger-menu"> <!-- hamburger menu  source - i have slimmed the CSS slightly but this is the source https://codepen.io/andreykrokhin/pen/mGEqja -->
             <input id="menu__toggle" type="checkbox">
             <label class="menu__btn" for="menu__toggle">
               <span></span>
             </label>
-
             <p class="title">North Louth History Club</p>
-
             <ul class="menu__box">
                 <li><a class="menu__item" href="index.html">Home</a></li>
                 <li><a class="menu__item" href="about.html">About</a></li>
@@ -25,16 +23,15 @@
             </ul>
         </div>
     </nav>
-    <nav class= "header">
+    <nav class= "header"> <!-- standard desktop-only horizontal navbar-->
         <a class="title" href="index.html">North Louth History Club</a>
             <a class="nav" href="index.html" id="current">Home</a>   
             <a class="nav" href="about.html">About</a>
             <a class="nav" href="history.html">History</a>
             <a class="nav" href="contact.html">Contact</a>
     </nav> 
-
     <section id="anchor">
-        <div class="flexitainer">
+        <div class="flexitainer"> <!-- flex container for all of content on homepage -->
             <div class="flexcontent">
                 <h2>Homepage</h2>
                 <p>
@@ -42,7 +39,7 @@
                     you will be able to access a range of historical materials relating to our local area encompassing 
                     Dundalk and its hinterlands - Omeath, Carlingford, Dunleer, Castlebellingham and all other smaller townlands.
                 </p>
-                <div class="containsimg">
+                <div class="containsimg"> <!-- this div class does what it says on the tin -->
                     <img alt="Greenore Station Placeholder" src="imgs/gyles.webp">
                     <p style="text-align: center; font-size: 0.75rem;">Local kids at Gyles Quay Station</p>
                 </div>
@@ -55,16 +52,10 @@
             <div class="aside"><h2>Social Media Ticker</h2>
                 <p class=""></p>
                 <a class="twitter-timeline" data-height="800" href="https://twitter.com/NLHC_ci?ref_src=twsrc%5Etfw">Twitter Feed</a> 
-                <script async src="twitter/widgets.js"></script> <!-- source: twitter embed. otherwise, the account is mine. https://publish.twitter.com/# -->
+                <script async src="twitter/widgets.js"></script> <!-- code source: twitter embed. otherwise, the linked account is mine. https://publish.twitter.com/# -->
             </div>
         </div>
-         
-          
-       
     </section>
-
-   
-
     <footer>
         <p>© North Louth History Club 2022</p> <a href="#anchor">Jump to top</a>
     </footer>

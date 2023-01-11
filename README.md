@@ -55,18 +55,21 @@ A History page containing the majority of the content & the most important part 
 A Contact page which collates all the contact information and methods into one single page. 
 
 The design of each page has been kept clean and ordered in a way that is logical and "flows" well. 
-The goal of the site is to make learning about the subject matter an enjoyable and accessible thing - many local history websites are plagued by design that is either bad or is not "responsive" i.e doesn't take well to being shown on a mobile device.
+The goal of the site is to make learning about the subject matter an enjoyable and accessible thing - many local history websites are plagued by design that is either bad (poorly contrasting colours, e.g black text on an olive-green coloured background; which is one such example I have found in the past) or is not "responsive" i.e doesn't take well to being shown on a mobile device and causes you to zoom out to a level where the text is uncomfortable on the eyes to read, or where you have to pan/scroll from side to side to view full lines - this is not conducive to popularizing history nor
+is it accessible to elderly folks & folks with limited vision.
 
 
 ## Technical Features
 
-Flexbox styling and media queries; complete continuity and preservation of features from Desktop to mobile, responsive design from 1920x1080 down to 1152x864 in full desktop mode and support for practically any mobile device. 
+Flexbox styling and media queries; complete continuity and preservation of features from Desktop to mobile, responsive design from 1920x1080 down to 1152x864 in full desktop mode and support for practically any mobile device.
 
 Dynamic and lively interactable buttons/fields - all major user input features have dynamic elements on Desktop which make it obvious when you have hovered over them and obvious when you have clicked into them - e.g the styling of the navbar buttons changes when you mouse over them, and a little border line is applied to the bottom of the navbar button which corresponds to the page the user is currently on.
 
 A particular little favourite of mine is the cha/ni map at the bottom of the History page and how it sits beside the text in desktop mode but above it in mobile mode - this is admittedly quite simple and is similar to the operation of the flexboxes on the contact and homepages, but it pleases me.
 
 Another minor feature is that the end of the page title turns to ellipsis when the page is resized horizontally and the navbar buttons collide with it.
+
+I am also fond of how the Contact page is in a 1-2-1 format on desktop but switches to 1-1-1-1 in mobile.
 
 Hamburger menu in mobile mode; I believe that in mobile mode it is essential to save space and every industry-standard mobile website uses a hamburger menu - so I sought to find a way to include it in this project. I managed to implement it in a clean way using the Checkbox Hack method which allows for dynamic CSS changes at the click of a button without involving Javascript: https://css-tricks.com/the-checkbox-hack/
 
@@ -89,22 +92,18 @@ If this were a real historical website; more rigorous sourcing would be necessar
 
 I would have liked to add a draggable "timeline", but I started a full-time job very early on into the project and so I did not have as much time left over as I had intitially envisioned - I have still managed, I feel, to turn out a passable website - but I would have liked to have had more personal free time to spend on it.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
-
-
-------
 
 # Testing 
 
-I tested the website in Chrome on my desktop and Chrome on my Android devices - methodically testing core elements on each page, zooming out, changing to landscape,
+I tested the website in Chrome on my desktop and Chrome on my Android devices - methodically testing core elements on each page, clicking every single button and feature, zooming in, zooming out, changing to landscape, switching to Desktop display mode on the Android device,
 etc - through this testing I discovered many actions which "broke" my website or which had somehow slipped thru the cracks 
-causing for e.g the hamburger menu to work on one page but not another.
+causing for e.g the hamburger menu to work on one page but not another, or elements to go out of kilter when zoomed out/in a particular degree or if the phone was rotated to landscape. The majority of the "out of kilter" elements were fixed by implementing more responsitivity and more "responsive" units such as REM rather than pixels.
 
 I also tested the website on Firefox and Edge - I do not have access to a Mac computer nor a Mac VM to test through Safari.
 
 I asked a friend to test the page for themselves and also submitted it for peer-code-review and took suggestions into account.
 
-I ran each individual page of the website through W3C Markup & CSS validator to see if anything was outdated, bad practice, outright wrong, etc and fixed accordingly. No errors on all pages.
+I ran each individual page of the website through W3C Markup & CSS validator to see if anything was outdated, bad practice, outright wrong, etc and fixed accordingly. No errors on all pages. I had quite a few typos, trailing slashes, etc. 
 
 ## Lighthouse
 
@@ -167,7 +166,7 @@ One other issue was that, in tablet/narrow browser tab display mode aka 1151px i
 
 I have also studied Flexbox in more detail since doing the above and feel I have a much better understanding of it now.
 
-## Deployment
+# Deployment
 I deployed my site, "North Louth History Club" on Github Pages. The process was as follows: 
 
 - I went to the project repository and navigated to the 'Settings' tab on the furthest right-edge of the repository menu
@@ -175,17 +174,23 @@ I deployed my site, "North Louth History Club" on Github Pages. The process was 
 - Under Branch, I selected 'Main' and then hit save.
 - I went off and retrieved a snack, came back and refreshed the page, and now had a link to my live website.
 
-## Credits
+The live website can be found here: https://jakob-bren.github.io/my-full-template/index.html 
+
+# Credits
 
 The bulk of the code for the Hamburger menu came from this [Codepen](https://codepen.io/andreykrokhin/pen/mGEqja) shared on a "Hamburger menu using purely HTML & CSS" article. 
 
 I referenced [this](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) while learning about Flexbox.
 
 Half of the photos and the video were sourced from a Facebook page called "Dundalk Northend and Friends"
+
 Other pictures were sourced from [Dundalk - Talk of the Town](https://talkofdatown.wordpress.com/)
+
 Picture of the railway shed is from [Archilovers](https://www.archilovers.com/projects/145262/hse-primary-care-unit.html)
+
 Background image is from [DiscoverIreland](https://www.discoverireland.ie/louth/short-stay-louth)
+
 Audio sourced from [Doegen.ie](http://doegen.ie/)
 
-I want to also give credit to my wife and my cats for supporting me through this project, as well as the wider Code Institute Slack community.
+The 
 
